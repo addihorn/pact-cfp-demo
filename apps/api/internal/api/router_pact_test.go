@@ -29,14 +29,13 @@ func TestToDoProvider(t *testing.T) {
 	err := verifier.VerifyProvider(t, provider.VerifyRequest{
 		Provider:           "ToDoService-Backend",
 		ProviderBaseURL:    fmt.Sprintf("http://127.0.0.1:%d", 8080),
-		ProviderBranch:     os.Getenv("VERSION_BRANCH"),
+		ProviderBranch:     "main",
 		FailIfNoPactsFound: false,
 
-		BrokerURL:                  "http://pact-broker-pact-broker.apps.os-prod.lab.proficom.de",
-		BrokerUsername:             "pact-admin",
-		BrokerToken:                "admin1234",
+		BrokerURL:                  "https://accompio-primetec-gmbh.pactflow.io",
+		BrokerToken:                os.Getenv("PACT_TOKEN"),
 		PublishVerificationResults: true,
-		ProviderVersion:            os.Getenv("VERSION_COMMIT"),
+		ProviderVersion:            "0.1.1",
 	})
 
 	if err != nil {
