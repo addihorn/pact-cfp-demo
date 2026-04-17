@@ -1,0 +1,26 @@
+# Root
+node_modules/
+.vscode/
+.idea/
+*.log
+
+# Web
+apps/web/node_modules/
+apps/web/dist/
+apps/web/coverage/
+apps/web/tsconfig.tsbuildinfo
+
+# API
+apps/api/bin/
+apps/api/coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# files with potential credentials
+.env
+
+# Reports
+**/playwright-report/
+**/test-results/
