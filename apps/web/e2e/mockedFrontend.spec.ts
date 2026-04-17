@@ -1,7 +1,7 @@
 import {test, expect } from '@playwright/test'
 import {Pact, SpecificationVersion} from '@pact-foundation/pact'
 import path from 'path'
-import { boolean, eachLike, integer, string, date } from '@pact-foundation/pact/src/v3/matchers'
+import { boolean, eachLike, integer, string, datetime } from '@pact-foundation/pact/src/v3/matchers'
 import { getRandomValues, randomBytes, randomInt } from 'crypto'
 
 
@@ -35,8 +35,8 @@ test.describe("The UI", () => {
                                     title: string("New ToDo"),
                                     description: string("This a new description of a todo"),
                                     completed: boolean(false),
-                                    createdAt: date('yyyy-MM-ddThh:mm:ssZ', '2026-07-21T18:17:43Z'),
-                                    updatedAt: date('yyyy-MM-ddThh:mm:ssZ', '2026-07-22T00:17:43Z'),
+                                    createdAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-21T18:17:43Z'),
+                                    updatedAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-22T00:17:43Z'),
                                 }, 3)
                         })
                 })            

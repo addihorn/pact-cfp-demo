@@ -1,7 +1,7 @@
 {
   "name": "todo-web",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.2",
   "type": "commonjs",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5173",
@@ -11,7 +11,7 @@
     "lint": "eslint src --ext ts,tsx",
     "e2etest": "playwright test",
     "pact:publish": "dotenv -- cross-var pact-broker publish --consumer-app-version $npm_package_version ./pacts/",
-    "pact:deploy-check": "dotenv -- cross-var pact-broker can-i-deploy --pacticipant ToDoService-Frontend"
+    "pact:deploy-check": "dotenv -- cross-var pact-broker can-i-deploy --pacticipant ToDoService-Frontend --latest"
   },
   "dependencies": {
     

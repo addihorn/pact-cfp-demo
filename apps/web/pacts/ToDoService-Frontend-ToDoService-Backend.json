@@ -99,7 +99,7 @@
               "combine": "AND",
               "matchers": [
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 }
               ]
@@ -132,7 +132,7 @@
               "combine": "AND",
               "matchers": [
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 }
               ]
@@ -263,16 +263,16 @@
               "combine": "AND",
               "matchers": [
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
-                  "match": "date"
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                  "match": "datetime"
                 },
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
-                  "match": "date"
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                  "match": "datetime"
                 },
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
-                  "match": "date"
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                  "match": "datetime"
                 }
               ]
             },
@@ -322,16 +322,16 @@
               "combine": "AND",
               "matchers": [
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
-                  "match": "date"
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                  "match": "datetime"
                 },
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
-                  "match": "date"
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                  "match": "datetime"
                 },
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
-                  "match": "date"
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                  "match": "datetime"
                 }
               ]
             }
@@ -420,15 +420,15 @@
               "combine": "AND",
               "matchers": [
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 },
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 },
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 }
               ]
@@ -479,15 +479,15 @@
               "combine": "AND",
               "matchers": [
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 },
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 },
                 {
-                  "format": "yyyy-MM-ddThh:mm:ssZ",
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 }
               ]

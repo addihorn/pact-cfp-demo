@@ -36,8 +36,8 @@ describe("The API", () => {
                     title: string('new ToDo'),
                     description: string('This is a new todo'),
                     completed: boolean(false),
-                    createdAt: datetime('yyyy-MM-ddThh:mm:ssZ', '2026-07-21T18:17:43Z'),
-                    updatedAt: datetime('yyyy-MM-ddThh:mm:ssZ', '2026-07-22T00:17:43Z'),
+                    createdAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-21T18:17:43Z'),
+                    updatedAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-22T00:17:43Z'),
             }}))
         })
     
@@ -72,8 +72,8 @@ describe("The API", () => {
                     title: string('1'), 
                     description: string('Beschreibung'), 
                     completed: boolean(), 
-                    createdAt: datetime('yyyy-MM-ddThh:mm:ssZ', '2026-07-21T18:17:43Z'),
-                    updatedAt: datetime('yyyy-MM-ddThh:mm:ssZ', '2026-07-22T00:17:43Z'),
+                    createdAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-21T18:17:43Z'),
+                    updatedAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-22T00:17:43Z'),
                 }, 3)
             })
         })
