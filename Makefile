@@ -12,9 +12,15 @@ migrate:
 seed:
 	docker compose run --rm seed
 
-test:
-	cd apps/api && go test ./...
-	cd apps/web && npm test -- --run
+consumer:
+	cd apps/web; \
+		rm -rf pacts; \
+		npm test -- --run; \
+		npm run e2etest
+
+provider:
+	cd apps/api; \
+	GOEXPERIMENT=jsonv2 go test ./...
 
 lint:
 	cd apps/api && gofmt -w . && go vet ./...
