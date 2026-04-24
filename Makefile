@@ -1,3 +1,5 @@
+PACT_DOWNLOAD_DIR=/tmp
+
 .PHONY: up down migrate seed test lint
 
 up:
@@ -17,6 +19,11 @@ consumer:
 		rm -rf pacts; \
 		npm test -- --run; \
 		npm run e2etest
+
+provider.install:
+	cd apps/api; \
+	go install github.com/pact-foundation/pact-go/v2; \
+	pact-go -l DEBUG install --libDir $(PACT_DOWNLOAD_DIR);
 
 provider:
 	cd apps/api; \
