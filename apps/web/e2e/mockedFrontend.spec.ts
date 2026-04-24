@@ -2,7 +2,6 @@ import {test, expect } from '@playwright/test'
 import {Pact, SpecificationVersion} from '@pact-foundation/pact'
 import path from 'path'
 import { boolean, eachLike, integer, string, datetime } from '@pact-foundation/pact/src/v3/matchers'
-import { getRandomValues, randomBytes, randomInt } from 'crypto'
 
 
 
@@ -11,7 +10,7 @@ test.describe("The UI", () => {
    const provider = new Pact({
         dir: path.resolve(process.cwd(), 'pacts'),
         consumer: 'ToDoService-Frontend',
-        provider: 'ToDoService-Backend',
+        provider: 'pactflow-bidi-provider',
         spec: SpecificationVersion.SPECIFICATION_VERSION_V4,
     })
  

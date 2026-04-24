@@ -11,12 +11,18 @@ import (
 	"github.com/aldihorn/pact-cfp-demo/apps/api/internal/config"
 	"github.com/aldihorn/pact-cfp-demo/apps/api/internal/observability"
 	"github.com/aldihorn/pact-cfp-demo/apps/api/internal/service"
+	"github.com/go-chi/cors"
 )
 
 func NewRouter(todoService service.TodoService, _ config.Config) http.Handler {
 	r := chi.NewRouter()
 	r.Use(middleware.Recoverer)
 	r.Use(appmw.Logging)
+	r.Use(cors.Handler(cors.Options{
+		AllowedOrigins: []string{"https://*", "http://*"},
+		AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		MaxAge:         300,
+	}))
 
 	todoHandler := handler.NewTodoHandler(todoService)
 

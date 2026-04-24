@@ -4,154 +4,46 @@
   },
   "interactions": [
     {
-      "description": "a new todo",
-      "pending": false,
-      "request": {
-        "body": {
-          "content": {
-            "description": "This is a new todo",
-            "title": "new ToDo"
-          },
-          "contentType": "application/json",
-          "encoded": false
-        },
-        "headers": {
-          "Content-Type": [
-            "application/json"
-          ],
-          "content-type": [
-            "application/json"
-          ]
-        },
-        "matchingRules": {
-          "body": {
-            "$": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            },
-            "$.description": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            },
-            "$.title": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            }
-          }
-        },
-        "method": "POST",
-        "path": "/api/v1/todos"
+      "comments": {
+        "testname": "reading the todo list generated a valid list in the ui"
       },
-      "response": {
-        "body": {
-          "content": {
-            "data": {
-              "completed": false,
-              "createdAt": "2026-07-21T18:17:43Z",
-              "description": "This is a new todo",
-              "id": 1,
-              "title": "new ToDo",
-              "updatedAt": "2026-07-22T00:17:43Z"
-            }
-          },
-          "contentType": "application/json",
-          "encoded": false
-        },
-        "headers": {
-          "Content-Type": [
-            "application/json"
-          ],
-          "content-type": [
-            "application/json"
-          ]
-        },
-        "matchingRules": {
-          "body": {
-            "$": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            },
-            "$.data.completed": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            },
-            "$.data.createdAt": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
-                  "match": "datetime"
-                }
-              ]
-            },
-            "$.data.description": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            },
-            "$.data.id": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "integer"
-                }
-              ]
-            },
-            "$.data.title": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            },
-            "$.data.updatedAt": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
-                  "match": "datetime"
-                }
-              ]
-            }
-          }
-        },
-        "status": 201
-      },
-      "type": "Synchronous/HTTP"
-    },
-    {
-      "description": "a request to read the todo list",
+      "description": "a request to read all todos",
       "pending": false,
       "providerStates": [
         {
-          "name": "the system already knows at least 3 todos"
+          "name": "at least three todos are in the database"
         }
       ],
       "request": {
+        "headers": {
+          "accept": [
+            "*/*"
+          ],
+          "accept-language": [
+            "en-US"
+          ],
+          "content-type": [
+            "application/json"
+          ],
+          "origin": [
+            "http://localhost:5173"
+          ],
+          "referer": [
+            "http://localhost:5173/"
+          ],
+          "sec-ch-ua": [
+            "\"HeadlessChrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\""
+          ],
+          "sec-ch-ua-mobile": [
+            "?0"
+          ],
+          "sec-ch-ua-platform": [
+            "\"Windows\""
+          ],
+          "user-agent": [
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.7727.15 Safari/537.36"
+          ]
+        },
         "method": "GET",
         "path": "/api/v1/todos"
       },
@@ -160,33 +52,42 @@
           "content": {
             "data": [
               {
-                "completed": true,
+                "completed": false,
                 "createdAt": "2026-07-21T18:17:43Z",
-                "description": "Beschreibung",
-                "id": 1,
-                "title": "1",
+                "description": "This a new description of a todo",
+                "id": 101,
+                "title": "New ToDo",
                 "updatedAt": "2026-07-22T00:17:43Z"
               },
               {
-                "completed": true,
+                "completed": false,
                 "createdAt": "2026-07-21T18:17:43Z",
-                "description": "Beschreibung",
-                "id": 1,
-                "title": "1",
+                "description": "This a new description of a todo",
+                "id": 101,
+                "title": "New ToDo",
                 "updatedAt": "2026-07-22T00:17:43Z"
               },
               {
-                "completed": true,
+                "completed": false,
                 "createdAt": "2026-07-21T18:17:43Z",
-                "description": "Beschreibung",
-                "id": 1,
-                "title": "1",
+                "description": "This a new description of a todo",
+                "id": 101,
+                "title": "New ToDo",
                 "updatedAt": "2026-07-22T00:17:43Z"
               }
             ]
           },
           "contentType": "application/json",
           "encoded": false
+        },
+        "generators": {
+          "body": {
+            "$.data[*].id": {
+              "max": 10,
+              "min": 0,
+              "type": "RandomInt"
+            }
+          }
         },
         "headers": {
           "Content-Type": [
@@ -311,6 +212,6 @@
     }
   },
   "provider": {
-    "name": "ToDoService-Backend"
+    "name": "pactflow-bidi-provider"
   }
 }

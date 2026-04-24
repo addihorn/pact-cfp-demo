@@ -20,6 +20,7 @@ Thumbs.db
 
 # files with potential credentials
 .env
+make/config.mk
 
 # Reports
 **/playwright-report/

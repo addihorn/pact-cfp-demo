@@ -1,0 +1,213 @@
+- generic [ref=e2]:
+  - navigation "main navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "letcode" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "letcode" [ref=e7]
+        - button "menu" [ref=e8] [cursor=pointer]
+      - text: 
+  - generic [ref=e12]:
+    - generic [ref=e14]:
+      - heading "Ready to be a Pro Engineer?" [level=1] [ref=e15]
+      - paragraph [ref=e16]:
+        - text: Practice test automation!
+        - link "Software" [ref=e17] [cursor=pointer]:
+          - img [ref=e19]
+          - text: Software
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - paragraph [ref=e29]: POM
+            - figure [ref=e31] [cursor=pointer]:
+              - img "product" [ref=e32]
+          - paragraph [ref=e35]: Practice Page Object Model with fakestore
+          - link "Page Object Model" [ref=e37] [cursor=pointer]:
+            - /url: /home
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: Input
+            - figure [ref=e44] [cursor=pointer]:
+              - img "edit" [ref=e45]
+          - paragraph [ref=e48]: Interact with different types of input fields
+          - link "Edit" [ref=e50] [cursor=pointer]:
+            - /url: /edit
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - paragraph [ref=e55]: Button
+            - figure [ref=e57] [cursor=pointer]:
+              - img "button" [ref=e58]
+          - paragraph [ref=e61]: Interact with different types of buttons
+          - link "Click" [ref=e63] [cursor=pointer]:
+            - /url: /button
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - paragraph [ref=e68]: Select
+            - figure [ref=e70] [cursor=pointer]:
+              - img "select" [ref=e71]
+          - paragraph [ref=e74]: Interact with different types of drop-down
+          - link "Drop-Down" [ref=e76] [cursor=pointer]:
+            - /url: /dropdowns
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - paragraph [ref=e81]: Alert
+            - figure [ref=e83] [cursor=pointer]:
+              - img "alert" [ref=e84]
+          - paragraph [ref=e87]: Interact with different types of dialog boxes
+          - link "Dialog" [ref=e89] [cursor=pointer]:
+            - /url: /alert
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - paragraph [ref=e94]: Frame
+            - figure [ref=e96] [cursor=pointer]:
+              - img "frame" [ref=e97]
+          - paragraph [ref=e100]: Interact with different types of frames/iframes
+          - link "Inner HTML" [ref=e102] [cursor=pointer]:
+            - /url: /frame
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - paragraph [ref=e107]: Radio
+            - figure [ref=e109] [cursor=pointer]:
+              - img "radio" [ref=e110]
+          - paragraph [ref=e113]: Interact with different types of radio & check boxes
+          - link "Toggle" [ref=e115] [cursor=pointer]:
+            - /url: /radio
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: Window
+            - figure [ref=e122] [cursor=pointer]:
+              - img "alert" [ref=e123]
+          - paragraph [ref=e126]: Switch different types of tabs or windows
+          - link "Tabs" [ref=e128] [cursor=pointer]:
+            - /url: /window
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - paragraph [ref=e133]: Elements
+            - figure [ref=e135] [cursor=pointer]:
+              - img "elements" [ref=e136]
+          - paragraph [ref=e139]: Play with element and smash them
+          - link "Find Elements" [ref=e141] [cursor=pointer]:
+            - /url: /elements
+        - generic [ref=e144]:
+          - generic [ref=e145]:
+            - paragraph [ref=e146]: Drag
+            - figure [ref=e148] [cursor=pointer]:
+              - img "drag" [ref=e149]
+          - paragraph [ref=e152]: Drag me here and there
+          - link "AUI - 1" [ref=e154] [cursor=pointer]:
+            - /url: /draggable
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - paragraph [ref=e159]: Drop
+            - figure [ref=e161] [cursor=pointer]:
+              - img "alert" [ref=e162]
+          - paragraph [ref=e165]: Feel free to bounce me
+          - link "AUI - 2" [ref=e167] [cursor=pointer]:
+            - /url: /droppable
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - paragraph [ref=e172]: Sort
+            - figure [ref=e174] [cursor=pointer]:
+              - img "sort" [ref=e175]
+          - paragraph [ref=e178]: Sort out the problem quickly
+          - link "AUI - 3" [ref=e180] [cursor=pointer]:
+            - /url: /sortable
+        - generic [ref=e183]:
+          - generic [ref=e184]:
+            - paragraph [ref=e185]: Multi-Select
+            - figure [ref=e187] [cursor=pointer]:
+              - img "selectable" [ref=e188]
+          - paragraph [ref=e191]: Be a multi-tasker
+          - link "AUI - 4" [ref=e193] [cursor=pointer]:
+            - /url: /selectable
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - paragraph [ref=e198]: Slider
+            - figure [ref=e200] [cursor=pointer]:
+              - img "slider" [ref=e201]
+          - paragraph [ref=e204]: Hmm.. Can you slide me?
+          - link "AUI - 5" [ref=e206] [cursor=pointer]:
+            - /url: /slider
+        - generic [ref=e209]:
+          - generic [ref=e210]:
+            - paragraph [ref=e211]: Waits
+            - figure [ref=e213] [cursor=pointer]:
+              - img "waits" [ref=e214]
+          - paragraph [ref=e217]: It's ok to wait but you know..
+          - link "Timeout" [ref=e219] [cursor=pointer]:
+            - /url: /waits
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - paragraph [ref=e224]: Table
+            - figure [ref=e226] [cursor=pointer]:
+              - img "table" [ref=e227]
+          - paragraph [ref=e230]: It's all about rows & columns
+          - link "Simple table" [ref=e232] [cursor=pointer]:
+            - /url: /table
+        - generic [ref=e235]:
+          - generic [ref=e236]:
+            - paragraph [ref=e237]: Table
+            - figure [ref=e239] [cursor=pointer]:
+              - img "table2" [ref=e240]
+          - paragraph [ref=e243]: It's little complicated but give a try
+          - link "Advance table" [ref=e245] [cursor=pointer]:
+            - /url: /advancedtable
+        - generic [ref=e248]:
+          - generic [ref=e249]:
+            - paragraph [ref=e250]: Calendar
+            - figure [ref=e252] [cursor=pointer]:
+              - img "calendar" [ref=e253]
+          - paragraph [ref=e256]: My time is precious & your?
+          - link "Date & Time" [ref=e258] [cursor=pointer]:
+            - /url: /calendar
+        - generic [ref=e261]:
+          - generic [ref=e262]:
+            - paragraph [ref=e263]: Forms
+            - figure [ref=e265] [cursor=pointer]:
+              - img "forms" [ref=e266]
+          - paragraph [ref=e269]: Interact with everything
+          - link "All in One" [ref=e271] [cursor=pointer]:
+            - /url: /forms
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - paragraph [ref=e276]: File
+            - figure [ref=e278] [cursor=pointer]:
+              - img "file" [ref=e279]
+          - paragraph [ref=e282]: All your data is secured!
+          - link "File management" [ref=e284] [cursor=pointer]:
+            - /url: /file
+        - generic [ref=e287]:
+          - generic [ref=e288]:
+            - paragraph [ref=e289]: Shadow
+            - figure [ref=e291] [cursor=pointer]:
+              - img "shadow" [ref=e292]
+          - paragraph [ref=e295]: Shadow never leaves us alone
+          - link "DOM" [ref=e297] [cursor=pointer]:
+            - /url: /shadow
+      - insertion [ref=e299]:
+        - iframe [ref=e301]:
+          - generic [ref=f3e3]:
+            - link "ad" [ref=f3e4] [cursor=pointer]:
+              - /url: //cdn.mediago.io/js/officialWebsite/policy.html
+              - img [ref=f3e5]
+            - link "Kaum jemand in Polen kennt diesen erschwinglichen Kredit" [ref=f3e7] [cursor=pointer]:
+              - /url: https://trace-eu.mediago.io/ju/ic?tn=41b6e88a2b85b0e731ef8e73e5558712&trackingid=528e0e708fa37bcad65db6de08488d48&acid=35758&data=zRY2qfaTmxWNQzZ8FARb7FGi1oBGYJSn9pDYVY9XM9i9-Omwv2B8s4rK4fh473p7FBswEhGlgruyr9rQ6jU7YdnCNl3123L1U0WxIioL4EcHBiPFGIGQ1oPQ4Pa8xYxstnbqRlfRTFzcxytR5qHITMX6zoib5r2l9bJMKoHQcccmBEOnkVM4veI9W1-FFCEzLj0fp6Nn7CVyO9qyN5BGOw3NJr8nlgeIL126b0QJHDvwRsIz0rKeCegTekHHQhsRO5FxZdympbK_enKQ_hLWh09EqWJELyD5yXY2VDkmN5p7jPQyyVnGylmfPwdVYUUDLT0JOC3_yzgKWXTC5og8WnPKSBIviLFAuXVh3q6v1SNpZkj0qQ46gd1kBU_jhM9pZzDBHCQfHJxK8C6YNbBfYmnfNFwqa_HJTUZ2cXfq14yfXoQWoHkw_HIBBuK9041nS4tgScMxLvibB2QuZgV_wYZCOLA9ZOGdPqF_o1pwIFYGpVIDItTPfqTKNw9IkViAhC7lgHWSivZqbOgDyCNBGZILviGzZH9YoP-PEnfbx9CgZKDS6KP8ceU__QLiIdIsULuf90dwHf6Hrb9pIhH4a4fymOPi4kjZAKQBOTsjCwxTTOn6zRG4yP1KxHvhPzVl_94wVNKt0ypTqALWZu2pMRBvaVGx7l0xsQLQA3ml99BIffodjURlRHVvFb0-w5gLbyI3y_qNY6s0GoOGfhpY-PFoH-Q0716WsYBollOxqzH2XDrybolsvYHhAWrKN7iRT2r_XIQMQpFKUdfBXSBAvedmJvXhssOfXwElo6vpT06G8IJujYhecXwRjnAbh-HSoJaXouPnf8Ox5aIpTkaXtzeAVBdqWQ66MR6CPoTibGiZ-37MHGcVszbTJSXWEd94lfHuTpqdnxx8duimdk_mx-WV-War-8q8GcnVCKZb9AJLkV74c9SOl3VVEFDhbseEprZx46A9euRkCYtlNieG17qpFdbRFyhyq5UniE83Tu0DR9Z8fwgTiU-_Ymq0bgjnEGcSdJuudlIDzH3Wv-IcLej3tH2jT6p2P95pW9l8E0jvwP7ev3EQC4lV_3CN6YHvfl7R-teRQ2GAg75XuTLklyhoKQo-i1YRPn8OZeVGa_JEIRQRiOIjL_K5ATmv1GEJeZPAyXbSiLHsT2msMCL_ASkQNEgbtB48cyLlPCDxwdnBXrBy7IwM-CVPPP5OM3R0I6TcVJZQSUI6Ar4slVglUD-VUPXRObgYAi8_g5J2jIkZIU3nt_oByxq4fGsbOgyGDE6MQI1AaX976e6zGJFtrlHFOPjnvT3_HxqWJrZDYmqvlaMA1BDSSCE3BOmX7THej8mPj1SRvVDctoWvLFmc_EGBjWvQNnp0c98H-2uWg_8u61i2HT3x-xs0prGSxNyDosh2QmPfIz_SBsJNeJX1BXluz1bPS74yDlU6t9KGfW3yC74-tU8iFMEm9M4IEQlv0otHhHynJNcQiv7mHJZJ3kAdZBVrgzodLHikRiin_u3ZcQcEDrrKY-LDyidBoykDwFPjlOO08KRCH2R0iwSQSODlMeiol6laezC6nnQr5zfKWNVwJIdap38NXidGd__WCZr7o9Gz8mVLIfU9JLVN9Tj_i253bD3PQhibzHBgfxVtqJWJKlso9HPv61Mcqx00rxeybRvs7CNmXhrY_YyptpzKCJOD9Qok6Ndb_B3zZtCGyerRKE4uGX4vAKEJbj931KGb8Z3QjiX5wibKLzHSxcGifaDTvar502APt2H4hhcEauoLzRFZTN4tB-ElUyVqyKgi48UGs2D9HpjkJBv-CxagrflfkgdYdMLaZ1gZhttgJ3wwPiadArOjhsMRZMNOBtYDcsyuyXP9MVNlUws8-yIRtXeO3A4aZtELUxf08pJ_70wjH8R0di5V8XqkGBOWehH_ZTI4eUiY9zKKhMpCYTfHkHez9nPyniDIdWVBjxaNB9CYL4Bwci4EV2XojR8b3UTfgcy8syQzbYD2RFJMz0NHJxdkstsLmlLgyGKijg2orWvprYRZOnJEDmoJUpQ6X1YayeZsK7duj--wD1bhOTyim0xrunShyTUW8NwzVlPpeGH5lpf8AHJ80Mu84yrESlJGrbGzyvRh3MS8TC1i5ZKjnNhOWYJtpBmahkhTduXJ1NEh2UVWUlN-3H4isDMW1BeDRJWcuatsgjs49nqNHCVfg57jdA-aP6zWpN0HpobTZmsk8P4BuCzlKtxT162JfzUJG8FCCqTRtR-06MmkzYCElHdurBXsFPoKzEtDTeUFmdxpF1rwtF103TMIqFYGY0X3oDayfARp462TkanjWOHGp-Rq8PvaOOlwAL2KlvTWtRH0Z0PJv-qds3dd3b9mKBs88a5DO6QAHkwc1-qTsH2eFcjAyPsFlY8DjQO9bW1IO9EpxKsepJMaXPPd0F4xPCs0w4XYM6CUga7eUgH1aJdQM4O_1VK40-I-LrPKYyI&uid=mid_no_ip_1f653e8c00c8a962b5e3d3da0c3e0337&mguid=&ap=0.013374&tid=102&gprice=ci_L2SM2BKeLqFVukv2MsRMVbdWFCyge6petzHPg8Fw&campaignid=4882898&c_sync=0&google_click_url=https://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DCtfGFL9bpaYrXLr2OwuIP3eeCsQr577npc8D4-ezNEMCNtwEQASDTkZYiYJWqs4LAB8gBCagDAcgDAqoE2wFP0EmowKdYedyZV8jnO8WKCodIvLnA9gl9_sdmCkjQZ37iRGtl2pX8qRaCXTuYINYDNmXILRJZRHwHgrZwUqNixFL2X4H5QK4ajdWHbQx8VeWi8yt7XcTlAXwEj5bvqnnKgJJmF6YK_caoFI2O6u2SdjB8dv6IRCfXQBNEQVaFSRkGtKcfK1oLlbFz07ZOuMaar0-LlZsdU6KxYFhEKE7P16HuHk5xggbmSaQCqmLuG-gMyyDv7SRS-jCYN6rtLrjZI8PtMuXCKSjWb4a4tI7yS147Vc3nBfMY__GABpb13pmM1di8ngGgBiGoB5PYsQKoB5TYsQKoB5XYsQKoB5rhsQKoB6a-G6gHltgbqAeqm7ECqAf_nrECqAffn7ECqAetvrECqAe_07EC2AcA0ggtCJHhgFAQATIIq4uAgKCAgAo6DACAgICAgJSoiAKoA0i9_cE6WIDR6IPFg5QD-gsCCAGADAGqDQJEReoNEwi_sOmDxYOUAxU9h1AGHd2zIKaIDgnQFQGAFwGyFwQYDFAB%26num%3D1%26sig%3DAOD64_3DOgTKtWaz8vHUALVhxzj75u3h9A%26client%3Dca-pub-6251538267574677%26adurl%3D
+              - generic [ref=f3e10]: Kaum jemand in Polen kennt diesen erschwinglichen Kredit
+    - generic [ref=e303]:
+      - generic:
+        - generic:
+          - generic:
+            - insertion
+  - contentinfo [ref=e305]:
+    - generic [ref=e307]:
+      - generic [ref=e308]:
+        - paragraph [ref=e309]: LetCode by Koushik Chatterjee
+        - paragraph [ref=e310]: Empowering Test Automation Engineers through learning
+      - paragraph [ref=e312]:
+        - text: © 2025 LetCode | Created by
+        - link "Koushik Chatterjee" [ref=e313] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/ortoni/
+        - text: "&"
+        - link "Bollineni Lakshmi Yaswanth" [ref=e314] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/bollineni-lakshmi-yaswanth-14472a199
