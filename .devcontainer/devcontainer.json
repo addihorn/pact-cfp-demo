@@ -5,17 +5,34 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/go:2-1.26-trixie",
 	"features": {
-		"ghcr.io/devcontainers/features/desktop-lite:1": {},
-		"ghcr.io/devcontainers/features/node:1": {}
-	}
+		"ghcr.io/devcontainers/features/desktop-lite:1": {
+			"version": "latest",
+			"noVncVersion": "1.6.0",
+			"password": "",
+			"webPort": "6080",
+			"vncPort": "5901"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "lts",
+			"pnpmVersion": "latest",
+			"nvmVersion": "latest"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": false,
+			"version": "latest",
+			"dockerDashComposeVersion": "v2"
+		}
+	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [6080]
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "go version",
 	// Configure tool-specific properties.
 	// "customizations": {},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	// "remoteUser": "root",
+	// "containerUser": "root"
 }
