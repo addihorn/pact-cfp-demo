@@ -20,7 +20,7 @@ func NewRouter(todoService service.TodoService, _ config.Config) http.Handler {
 	r.Use(appmw.Logging)
 	r.Use(cors.Handler(cors.Options{
 		AllowedOrigins: []string{"https://*", "http://*"},
-		AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"},
 		MaxAge:         300,
 	}))
 

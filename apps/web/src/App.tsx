@@ -37,8 +37,8 @@ export default function App() {
   };
 
   const handleToggle = async (todo: Todo) => {
-    await patchTodo(todo.id, { completed: !todo.completed });
-    await loadTodos();
+    const data = await patchTodo(todo.id, { completed: !todo.completed });
+    //await loadTodos();
   };
 
   const handleDelete = async (id: number) => {
