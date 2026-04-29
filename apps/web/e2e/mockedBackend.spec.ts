@@ -12,6 +12,7 @@ test.describe("The UI", () => {
         consumer: 'ToDoService-Frontend',
         provider: 'pactflow-bidi-provider',
         spec: SpecificationVersion.SPECIFICATION_VERSION_V4,
+        logLevel: 'info'
     })
  
     test("can load existing todos", async ({page, request}) =>  {
@@ -24,17 +25,32 @@ test.describe("The UI", () => {
         await markAsDone(page, request)
 
     })
-
+    
     const todoList = {data:
-        eachLike(
-            {
-                id: integer(),
-                title: string("New ToDo"),
-                description: string("This a new description of a todo"),
-                completed: boolean(false),
-                createdAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-21T18:17:43Z'),
-                updatedAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-22T00:17:43Z'),
-            }, 3)
+        [like({
+            id: integer(1),
+            title: string("First ToDo"),
+            description: string("This the description of my first todo"),
+            completed: boolean(false),
+            createdAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-21T18:17:43Z'),
+            updatedAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-22T00:17:43Z'),
+        }),
+        like({
+            id: integer(2),
+            title: string("Second ToDo"),
+            description: string("This a new description of another todo"),
+            completed: boolean(false),
+            createdAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-21T18:17:43Z'),
+            updatedAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-22T00:17:43Z'),
+        }),
+        like({
+            id: integer(3),
+            title: string("Third ToDo"),
+            description: string("my final todo"),
+            completed: boolean(false),
+            createdAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-21T18:17:43Z'),
+            updatedAt: datetime("yyyy-MM-dd'T'HH:mm:ss'Z'", '2026-07-22T00:17:43Z'),
+        })]
     }
 
 
@@ -52,7 +68,7 @@ test.describe("The UI", () => {
                     })
                     .willRespondWith(200, (builder) => {
                             builder.headers({'Content-Type':'application/json'})
-                            builder.jsonBody(todoList.data)
+                            builder.jsonBody(todoList)
                     })            
                 await stub.executeTest( async (mockserver) => {
                     const response = await request.get(`${mockserver.url}/api/v1/todos`, {headers: <any>route.request().headers()})
@@ -90,13 +106,17 @@ test.describe("The UI", () => {
                             })
                     })            
                 await stub.executeTest( async (mockserver) => {
-                    const response = await request.patch(`${mockserver.url}/api/v1/todos/1`, {headers: <any>route.request().headers()})
+                    const response = await request.patch(`${mockserver.url}/api/v1/todos/1`, {headers: <any>route.request().headers(), data: route.request().postData()})
                     const json = await response.json()
                     await route.fulfill({response, json})
                 })                
             })
 
-            await page.getByRole('button', { name: 'Mark Done' }).first().click()
+
+            const firstItem = page.getByRole("list").first().getByRole("listitem").first()
+
+            await firstItem.getByRole('button', { name: 'Mark Done' }).first().click()
+            await expect(firstItem).toHaveClass("done")
     }
 
 

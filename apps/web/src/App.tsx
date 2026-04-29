@@ -31,19 +31,34 @@ export default function App() {
     void loadTodos();
   }, [loadTodos]);
 
-  const handleCreate = async (title: string, description: string) => {
-    await createTodo({ title, description });
-    await loadTodos();
+  const handleCreateTodo = async (title: string, description: string) => {
+    try {
+      setError(null);
+      const newTodo = await createTodo({ title, description });
+      setTodos((prevTodos) => [...prevTodos, newTodo]);
+    } catch (e) {
+      setError((e as Error).message);
+    }
   };
 
-  const handleToggle = async (todo: Todo) => {
-    const data = await patchTodo(todo.id, { completed: !todo.completed });
-    //await loadTodos();
+  const handleToggleTodo = async (todo: Todo) => {
+    try {
+      setError(null);
+      const updatedTodo = await patchTodo(todo.id, { completed: !todo.completed });
+      setTodos((prevTodos) => prevTodos.map((t) => (t.id === updatedTodo.id ? updatedTodo : t)));
+    } catch (e) {
+      setError((e as Error).message);
+    }
   };
 
-  const handleDelete = async (id: number) => {
-    await deleteTodo(id);
-    await loadTodos();
+  const handleDeleteTodo = async (id: number) => {
+    try {
+      setError(null);
+      await deleteTodo(id);
+      setTodos((prevTodos) => prevTodos.filter((t) => t.id !== id));
+    } catch (e) {
+      setError((e as Error).message);
+    }
   };
 
   return (
@@ -53,7 +68,7 @@ export default function App() {
         <h1>Todo Control Panel</h1>
       </header>
 
-      <TodoForm onSubmit={handleCreate} />
+      <TodoForm onSubmit={handleCreateTodo} />
 
       <section className="todos-panel">
         <div className="panel-header">
@@ -63,7 +78,7 @@ export default function App() {
 
         {loading ? <p>Loading todos...</p> : null}
         {error ? <p className="error">{error}</p> : null}
-        {!loading && !error ? <TodoList todos={todos} onToggle={handleToggle} onDelete={handleDelete} /> : null}
+        {!loading && !error ? <TodoList todos={todos} onToggle={handleToggleTodo} onDelete={handleDeleteTodo} /> : null}
       </section>
     </main>
   );

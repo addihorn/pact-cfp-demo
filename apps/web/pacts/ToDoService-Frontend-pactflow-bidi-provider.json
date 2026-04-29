@@ -12,6 +12,12 @@
       "providerStates": [
         {
           "name": "at least three todos are in the database"
+        },
+        {
+          "name": "a todo with id 1 exists in the database"
+        },
+        {
+          "name": "todo 1 is not completed "
         }
       ],
       "request": {
@@ -26,10 +32,10 @@
             "application/json"
           ],
           "origin": [
-            "http://localhost:5173"
+            "http://localhost:5175"
           ],
           "referer": [
-            "http://localhost:5173/"
+            "http://localhost:5175/"
           ],
           "sec-ch-ua": [
             "\"Chromium\";v=\"147\", \"Not.A/Brand\";v=\"8\""
@@ -54,40 +60,31 @@
               {
                 "completed": false,
                 "createdAt": "2026-07-21T18:17:43Z",
-                "description": "This a new description of a todo",
-                "id": 101,
-                "title": "New ToDo",
+                "description": "This the description of my first todo",
+                "id": 1,
+                "title": "First ToDo",
                 "updatedAt": "2026-07-22T00:17:43Z"
               },
               {
                 "completed": false,
                 "createdAt": "2026-07-21T18:17:43Z",
-                "description": "This a new description of a todo",
-                "id": 101,
-                "title": "New ToDo",
+                "description": "This a new description of another todo",
+                "id": 2,
+                "title": "Second ToDo",
                 "updatedAt": "2026-07-22T00:17:43Z"
               },
               {
                 "completed": false,
                 "createdAt": "2026-07-21T18:17:43Z",
-                "description": "This a new description of a todo",
-                "id": 101,
-                "title": "New ToDo",
+                "description": "my final todo",
+                "id": 3,
+                "title": "Third ToDo",
                 "updatedAt": "2026-07-22T00:17:43Z"
               }
             ]
           },
           "contentType": "application/json",
           "encoded": false
-        },
-        "generators": {
-          "body": {
-            "$.data[*].id": {
-              "max": 10,
-              "min": 0,
-              "type": "RandomInt"
-            }
-          }
         },
         "headers": {
           "Content-Type": [
@@ -96,99 +93,174 @@
         },
         "matchingRules": {
           "body": {
-            "$.data": {
+            "$.data[0]": {
               "combine": "AND",
               "matchers": [
-                {
-                  "match": "type",
-                  "min": 3
-                }
-              ]
-            },
-            "$.data[*].completed": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                },
-                {
-                  "match": "type"
-                },
                 {
                   "match": "type"
                 }
               ]
             },
-            "$.data[*].createdAt": {
+            "$.data[0].completed": {
               "combine": "AND",
               "matchers": [
                 {
-                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
-                  "match": "datetime"
-                },
-                {
-                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
-                  "match": "datetime"
-                },
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[0].createdAt": {
+              "combine": "AND",
+              "matchers": [
                 {
                   "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
                 }
               ]
             },
-            "$.data[*].description": {
+            "$.data[0].description": {
               "combine": "AND",
               "matchers": [
-                {
-                  "match": "type"
-                },
-                {
-                  "match": "type"
-                },
                 {
                   "match": "type"
                 }
               ]
             },
-            "$.data[*].id": {
+            "$.data[0].id": {
               "combine": "AND",
               "matchers": [
-                {
-                  "match": "integer"
-                },
-                {
-                  "match": "integer"
-                },
                 {
                   "match": "integer"
                 }
               ]
             },
-            "$.data[*].title": {
+            "$.data[0].title": {
               "combine": "AND",
               "matchers": [
-                {
-                  "match": "type"
-                },
-                {
-                  "match": "type"
-                },
                 {
                   "match": "type"
                 }
               ]
             },
-            "$.data[*].updatedAt": {
+            "$.data[0].updatedAt": {
               "combine": "AND",
               "matchers": [
                 {
                   "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
-                },
+                }
+              ]
+            },
+            "$.data[1]": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[1].completed": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[1].createdAt": {
+              "combine": "AND",
+              "matchers": [
                 {
                   "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
-                },
+                }
+              ]
+            },
+            "$.data[1].description": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[1].id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "integer"
+                }
+              ]
+            },
+            "$.data[1].title": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[1].updatedAt": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                  "match": "datetime"
+                }
+              ]
+            },
+            "$.data[2]": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[2].completed": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[2].createdAt": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                  "match": "datetime"
+                }
+              ]
+            },
+            "$.data[2].description": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[2].id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "integer"
+                }
+              ]
+            },
+            "$.data[2].title": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.data[2].updatedAt": {
+              "combine": "AND",
+              "matchers": [
                 {
                   "format": "yyyy-MM-dd'T'HH:mm:ss'Z'",
                   "match": "datetime"
@@ -209,11 +281,24 @@
       "pending": false,
       "providerStates": [
         {
-          "name": "a todo with id 1 is in the database"
+          "name": "a todo with id 1 exists in the database"
+        },
+        {
+          "name": "todo 1 is not completed "
         }
       ],
       "request": {
+        "body": {
+          "content": {
+            "completed": true
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
         "headers": {
+          "Content-Type": [
+            "application/json"
+          ],
           "accept": [
             "*/*"
           ],
@@ -224,10 +309,10 @@
             "application/json"
           ],
           "origin": [
-            "http://localhost:5173"
+            "http://localhost:5175"
           ],
           "referer": [
-            "http://localhost:5173/"
+            "http://localhost:5175/"
           ],
           "sec-ch-ua": [
             "\"Chromium\";v=\"147\", \"Not.A/Brand\";v=\"8\""
@@ -252,22 +337,13 @@
               "completed": true,
               "createdAt": "2026-07-21T18:17:43Z",
               "description": "This a new description of a todo",
-              "id": 101,
+              "id": 1,
               "title": "New ToDo",
               "updatedAt": "2026-07-22T00:17:43Z"
             }
           },
           "contentType": "application/json",
           "encoded": false
-        },
-        "generators": {
-          "body": {
-            "$.data.id": {
-              "max": 10,
-              "min": 0,
-              "type": "RandomInt"
-            }
-          }
         },
         "headers": {
           "Content-Type": [
