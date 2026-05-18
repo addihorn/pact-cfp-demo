@@ -38,7 +38,7 @@
             "http://localhost:5175/"
           ],
           "sec-ch-ua": [
-            "\"Chromium\";v=\"147\", \"Not.A/Brand\";v=\"8\""
+            "\"HeadlessChrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\""
           ],
           "sec-ch-ua-mobile": [
             "?0"
@@ -315,7 +315,7 @@
             "http://localhost:5175/"
           ],
           "sec-ch-ua": [
-            "\"Chromium\";v=\"147\", \"Not.A/Brand\";v=\"8\""
+            "\"HeadlessChrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\""
           ],
           "sec-ch-ua-mobile": [
             "?0"

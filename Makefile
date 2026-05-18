@@ -4,8 +4,11 @@ PACT_DOWNLOAD_DIR=/tmp
 
 .PHONY: up down migrate seed test lint
 
-up:
+up.build:
 	docker compose up --build
+
+up:
+	docker compose up --force-recreate 
 
 down:
 	docker compose down -v
@@ -43,6 +46,10 @@ provider:
 	cd apps/api; \
 	GOEXPERIMENT=jsonv2 go test -json ./... > test-results.json || test $$? -eq 0;	
 
+provider.verbose:
+	cd apps/api; \
+	GOEXPERIMENT=jsonv2 go test ./...	
+
 provider.publish-oapi:
 	docker run --rm -v /${PWD}:/pc -w /pc \
 		-e PACT_BROKER_BASE_URL="${PACT_BROKER_PROTO}://${PACT_BROKER_URL}" \
@@ -58,6 +65,19 @@ provider.publish-oapi:
 		--verification-results apps/api/test-results.json \
 		--verification-results-content-type application/json \
 		--verifier gotest
+
+provider.can-i-deploy:
+	docker run --rm -v /${PWD}:/pc -w /pc \
+		-e PACT_BROKER_BASE_URL="${PACT_BROKER_PROTO}://${PACT_BROKER_URL}" \
+		-e PACT_BROKER_TOKEN \
+		pactfoundation/pact-cli \
+		pact-broker can-i-deploy --pacticipant ToDoService-Backend --latest
+
+	docker run --rm -v /${PWD}:/pc -w /pc \
+		-e PACT_BROKER_BASE_URL="${PACT_BROKER_PROTO}://${PACT_BROKER_URL}" \
+		-e PACT_BROKER_TOKEN \
+		pactfoundation/pact-cli \
+		pact-broker can-i-deploy --pacticipant pactflow-bidi-provider --latest
 
 
 
