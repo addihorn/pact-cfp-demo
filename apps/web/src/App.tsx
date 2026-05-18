@@ -44,7 +44,9 @@ export default function App() {
   const handleToggleTodo = async (todo: Todo) => {
     try {
       setError(null);
-      const updatedTodo = await patchTodo(todo.id, { completed: !todo.completed });
+      const updateTodo = todo
+      updateTodo.completed = !updateTodo.completed
+      const updatedTodo = await patchTodo(todo.id, updateTodo);
       setTodos((prevTodos) => prevTodos.map((t) => (t.id === updatedTodo.id ? updatedTodo : t)));
     } catch (e) {
       setError((e as Error).message);

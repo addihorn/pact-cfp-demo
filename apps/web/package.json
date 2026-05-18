@@ -1,7 +1,7 @@
 {
   "name": "todo-web",
   "private": true,
-  "version": "0.1.7",
+  "version": "0.2.0",
   "type": "commonjs",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5175",
@@ -12,7 +12,7 @@
     "playwright:install": "playwright install chromium --with-deps",
     "e2etest": "playwright test",
     "pact:publish": "dotenv -- cross-var pact-broker publish --validate --consumer-app-version $npm_package_version ./pacts/ --branch ${VERSION_BRANCH}",
-    "pact:deploy-check": "dotenv -- cross-var pact-broker can-i-deploy --pacticipant ToDoService-Frontend --latest"
+    "pact:deploy-check": "dotenv -- cross-var pact-broker can-i-deploy --pacticipant ToDoService-Frontend -e $npm_package_version"
   },
   "dependencies": {
     

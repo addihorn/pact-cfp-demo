@@ -60,7 +60,7 @@ test.describe("The UI", () => {
                     .given('a todo with id 1 exists in the database')
                     .given('todo 1 is not completed ')
                     .uponReceiving('an update for the first todo')
-                    .withRequest('PATCH', '/api/v1/todos/1', (builder) => {
+                    .withRequest('POST', '/api/v1/todos/1', (builder) => {
                         builder.headers(<any>route.request().headers())
                         builder.jsonBody(route.request().postData())
                     })
@@ -78,7 +78,7 @@ test.describe("The UI", () => {
                             })
                     })            
                 await stub.executeTest( async (mockserver) => {
-                    const response = await request.patch(`${mockserver.url}/api/v1/todos/1`, {headers: <any>route.request().headers(), data: route.request().postData()})
+                    const response = await request.post(`${mockserver.url}/api/v1/todos/1`, {headers: <any>route.request().headers(), data: route.request().postData()})
                     const json = await response.json()
                     await route.fulfill({response, json})
                 })                

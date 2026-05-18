@@ -290,7 +290,12 @@
       "request": {
         "body": {
           "content": {
-            "completed": true
+            "completed": true,
+            "createdAt": "2026-07-21T18:17:43Z",
+            "description": "This the description of my first todo",
+            "id": 1,
+            "title": "First ToDo",
+            "updatedAt": "2026-07-22T00:17:43Z"
           },
           "contentType": "application/json",
           "encoded": false
@@ -327,7 +332,7 @@
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.7727.15 Safari/537.36"
           ]
         },
-        "method": "PATCH",
+        "method": "POST",
         "path": "/api/v1/todos/1"
       },
       "response": {

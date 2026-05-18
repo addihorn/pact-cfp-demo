@@ -61,7 +61,7 @@ export function createTodo(payload: TodoPayload): Promise<Todo> {
 
 export function patchTodo(id: number, payload: TodoPatchPayload): Promise<Todo> {
   return request<Todo>(`/api/v1/todos/${id}`, {
-    method: "PATCH",
+    method: "PUT",
     body: JSON.stringify(payload)
   });
 }
