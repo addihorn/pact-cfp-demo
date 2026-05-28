@@ -14,6 +14,16 @@ This file defines the agent contract and serves as the index to project guidance
 2) This AGENTS.md contract (general repository conventions).
 3) Generic assumptions (avoid unless explicitly allowed).
 
+## OpenSpec Compatibility
+- This repository intentionally uses a Kiro/Codex-style OpenSpec layout under `.codex/`.
+- Treat root `AGENTS.md`, `project.md`, `.codex/steering/*.md`, and `.codex/specs/<feature-name>/*.md` as the canonical OpenSpec context.
+- The absence of `openspec/AGENTS.md`, top-level `specs/**/*.spec.md`, or `specs/<feature>/spec.md` is intentional and does not indicate missing setup.
+- New feature specifications MUST be created under `.codex/specs/<feature-name>/`.
+- New feature specifications SHOULD contain `requirements.md`, `design.md`, and `tasks.md`.
+- Do not create parallel OpenSpec documents under `openspec/` or top-level `specs/` unless the project formally migrates layouts.
+- If an OpenSpec CLI configuration file is present, it must act only as an adapter that points tools back to `.codex/` and the repository-owned context files.
+- When generic OpenSpec directory assumptions conflict with this repository guidance, this repository guidance takes precedence.
+
 ## Agent Behavior Contract
 - Prefer project-provided abstractions for CLI operations; avoid ad-hoc process spawning when wrappers exist.
 - Respect feature flags and configuration gating documented in Steering or related code references.

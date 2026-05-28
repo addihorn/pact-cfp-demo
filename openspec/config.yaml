@@ -1,0 +1,49 @@
+project: pact-cfp-demo
+schema: spec-driven
+
+x-project:
+  description: 3-tier Todo demo application using REST contracts and local-first development workflows.
+
+  sources:
+    project: project.md
+    steering:
+      product: .codex/steering/product.md
+      tech: .codex/steering/tech.md
+      structure: .codex/steering/structure.md
+    canonical_api_contract: docs/openapi.yaml
+
+  specifications:
+    root: .codex/specs
+    exclusive: true
+    feature_pattern: .codex/specs/<feature-name>
+    files:
+      requirements: requirements.md
+      design: design.md
+      tasks: tasks.md
+
+  planning_rules:
+    preserve_current_sdd_structure: true
+    prohibit_specs_directory: true
+    steering_read_only: true
+    require_spec_for:
+      - behavior_changes
+      - architecture_changes
+      - api_contract_changes
+      - cross_tier_boundary_changes
+    canonical_contract_updates:
+      - docs/openapi.yaml
+
+  precedence:
+    - .codex/steering/product.md
+    - .codex/steering/tech.md
+    - .codex/steering/structure.md
+    - .codex/specs
+    - docs/openapi.yaml
+
+  boundaries:
+    tier_direction: web -> api -> db
+    out_of_scope_v1:
+      - authentication
+      - authorization
+      - multi_tenancy
+      - external_integrations
